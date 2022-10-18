@@ -1,0 +1,7 @@
+version: '3'
+services:
+  web-spider:
+    image: webspidertest
+    container_name: webspidertest
+    ports:
+      - 5010:80

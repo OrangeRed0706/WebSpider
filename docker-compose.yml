@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web-spider:
+    image: webspider
+    container_name: webspider
+    volumes:
+      - /f/WebSpiderDB/WebSpider.db:/data/db
+    ports:
+      - 5000:80

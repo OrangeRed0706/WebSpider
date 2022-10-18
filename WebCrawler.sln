@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSpider", "WebSpider\WebSpider.csproj", "{5136C542-D700-4584-AABE-E0AE951E4280}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSpider.Context", "WebSpider.Context\WebSpider.Context.csproj", "{29535E60-D119-4D71-9E70-DA06C717BF97}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5136C542-D700-4584-AABE-E0AE951E4280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5136C542-D700-4584-AABE-E0AE951E4280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5136C542-D700-4584-AABE-E0AE951E4280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5136C542-D700-4584-AABE-E0AE951E4280}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29535E60-D119-4D71-9E70-DA06C717BF97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29535E60-D119-4D71-9E70-DA06C717BF97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29535E60-D119-4D71-9E70-DA06C717BF97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29535E60-D119-4D71-9E70-DA06C717BF97}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {17DB879C-C45E-4C17-A08B-AF5CF2FECB69}
+	EndGlobalSection
+EndGlobal

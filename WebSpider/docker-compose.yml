@@ -1,0 +1,7 @@
+version: '3'
+services:
+  web-spider:
+    image: webspider
+    container_name: webspider
+    volumes:
+      - /F/WebSpiderDB/WebSpider.db:/data/db
