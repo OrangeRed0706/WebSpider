@@ -1,4 +1,5 @@
-﻿using Discord;
+﻿using System.Security.Cryptography;
+using Discord;
 using Discord.Webhook;
 using Microsoft.Extensions.Options;
 using WebSpider.Context.Entities;
@@ -16,9 +17,8 @@ namespace WebSpider.Utility
             Options = options.Value;
         }
 
-        async Task ISendMessage.SendBahamutDiscordWebHookMessages(Post post,bool favorite)
+        async Task ISendMessage.SendBahamutDiscordWebHookMessages(Post post, bool favorite)
         {
-            var r = new Random();
             var embed = new EmbedBuilder
             {
                 Title = post.Title,
@@ -29,7 +29,7 @@ namespace WebSpider.Utility
                     IconUrl = Options.WebHookAuthorIconUrl
                 },
                 Url = post.Link,
-                Color = new Color(r.Next(256), r.Next(256), r.Next(256)),
+                Color = GetRandomColor(),
                 Timestamp = DateTimeOffset.Now,
                 ImageUrl = post.ImageUri,
             };
@@ -37,7 +37,18 @@ namespace WebSpider.Utility
             {
                 await SendDiscordWebHookFavoriteMessages(embed.Build());
             }
+            
             await SendDiscordWebHookMessages(embed.Build());
+
+            Color GetRandomColor()
+            {
+                return new Color(GetRandom(), GetRandom(), GetRandom());
+                
+                byte GetRandom()
+                {
+                    return (byte)RandomNumberGenerator.GetInt32(0, 255);
+                }
+            }
         }
         public async Task SendDiscordWebHookMessages(Embed embed)
         {

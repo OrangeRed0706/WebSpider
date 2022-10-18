@@ -1,4 +1,5 @@
-﻿using WebSpider.Interface;
+﻿using System.Security.Cryptography;
+using WebSpider.Interface;
 using WebSpider.Services.Interface;
 using WebSpider.Utility.Interface;
 
@@ -20,8 +21,8 @@ namespace WebSpider.Job
 
         async Task IBahamutSpiderJob.RunJob()
         {
-            var random = new Random();
-            await Task.Delay(random.Next(1000, 280000));
+            var random = RandomNumberGenerator.GetInt32(1000, 280000);
+            await Task.Delay(random);
             _logger.LogInformation("Start Job");
             var posts = await _bahamutSpider.GetNewsPost();
             await Task.WhenAll(posts.Select(async post =>
